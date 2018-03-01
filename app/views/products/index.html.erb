@@ -1,0 +1,8 @@
+<h4><%= @department.name %> | Products <h4>
+<hr>
+<%= link_to 'Create a New Product', new_department_product_path(@department) %>
+<ul>
+  <% @products.each do |product| %>
+    <li><%= link_to product.name, [@department, product] %></li>
+  <% end %>
+  </ul>
